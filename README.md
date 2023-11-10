@@ -1,0 +1,2 @@
+# AlteracValleyAFKBot
+AlteracValleyAFKBot - Bash
