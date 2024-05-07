@@ -29,38 +29,31 @@ function joinqueue
     #Join queue
     echo "Targeting NPC"
     sleep 0.2
-    xdotool key Return
-    sleep 0.2
-    xdotool key slash
-    xdotool key t
-    xdotool key a
-    xdotool key r
-    xdotool key g
-    xdotool key e
-    xdotool key t
-    xdotool key space
-    xdotool key T
     xdotool key h
-    xdotool key e
-    xdotool key l
-    xdotool key m
-    xdotool key a
-    xdotool key n
-    xdotool key Return
-    xdotool key 0
-    sleep 0.1
-    xdotool key 0
     sleep 1
 
     #Join bg and accept q
     echo "I would like to go to the battleground."
-    xdotool mousemove --sync 2825 449
+    xdotool mousemove --sync 2814 424
+    xdotool click 1
+    sleep 1
+
+    #Scroll down and choose AV
+    echo "Scroll down and choose AV."
+    xdotool mousemove --sync 3126 439
+    xdotool click 1
+    sleep 0.2
+    xdotool click 1
+    sleep 0.2
+    xdotool click 1
+    xdotool mousemove --sync 2732 340
+    sleep 0.1
     xdotool click 1
     sleep 1
 
     #Join battle
     echo "Pressing Join Battle and joining queue."
-    xdotool mousemove --sync 2901 887
+    xdotool mousemove --sync 2672 884
     xdotool click 1
 }
 
@@ -68,7 +61,7 @@ function enterbattle
 {
     #Join bq pop
     echo "Enter battle."
-    xdotool mousemove --sync 3645 322
+    xdotool mousemove --sync 3645 362
     xdotool click 1
 }
 
@@ -119,7 +112,7 @@ function antiAFK
     sleep 0.1
     echo "Sleeping for Shadowmeld CD."
     sleep 10
-    xdotool key g
+    xdotool key r
 
 }
 
@@ -197,7 +190,7 @@ function checkcurrentstatus
     fi
 
     #Has the Enter Battle popped?
-    if limitedsearch 120, 3, 0, 3643. 323
+    if limitedsearch 120, 3, 0, 3653, 366
     then
         echo "#BG pop!"
         enterbattle=1
